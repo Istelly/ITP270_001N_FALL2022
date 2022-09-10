@@ -23,8 +23,8 @@ my_team = 28 % 4
 print(my_team)
 
 #concatonation
-String1 = "The wind, "
-String2 = "Which had hitherot carried us along with amazing rapidity, "
+string1 = "The wind, "
+string2 = "Which had hitherot carried us along with amazing rapidity, "
 string3 = "sank at sunset to a light breeze: " 
 
 message = string1 + string2 + string3
