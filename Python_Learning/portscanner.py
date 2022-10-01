@@ -13,7 +13,7 @@ print(Port_scanner_Banner)
 
 time.sleep(1)
 
-remoteServer = input("Enter a IP to scan:m")
+remoteServer = input("Enter a IP to scan: ")
 target = socket.gethostbyname(remoteServer)
 
 print ("_" * 50)
