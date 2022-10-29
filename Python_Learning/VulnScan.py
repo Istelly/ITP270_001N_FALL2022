@@ -66,7 +66,7 @@ if __name__ == "__main__":
     start_port = input('enter the port to start the scan: ')
     end_port = input('enter the port to end the scan: ')
  
-    time_start = datetime.now().replace(miscrosecond=0)
+    time_start = datetime.now().replace(microsecond=0)
     print("Scanning started at:" + str(time_start)) 
 
     if ',' in targets:
