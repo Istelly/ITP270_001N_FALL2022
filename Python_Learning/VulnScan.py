@@ -18,7 +18,7 @@ banners = []
 def scan(target):
     converted_ip = convert_ip(target)
     print('\n' + 'Scanning Target : ' + str(target))
-    for port in range(21,80):
+    for port in range(int(start_port),int(end_port)):
         scan_port(converted_ip, port)
 
 def convert_ip(ip):
@@ -64,8 +64,7 @@ if __name__ == "__main__":
     targets = input('[+] Enter Target/s To Scan( for multiple targets usea  comma): ')
     start_port = input('enter the port to start the scan: ')
     end_port = input('enter the port to end the scan: ')
-    start_port = start_port
-    end_port = end_port
+ 
 
     if ',' in targets:
         for ip_address in targets.split(','):
