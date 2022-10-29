@@ -34,6 +34,19 @@ def convert_ip(ip):
 def scan_port(ipaddress, port):
     try:
         sock = socket.socket()
+        sock.settimeout(0.1)
+        sock.connect((ipaddress, port))
+
+        try:
+            banner = get_banner(sock)
+            print('[+] Port ' + str(port) + ' is Open ' + ' : ' + str(banner.decode().strip('\n')))
+        except:
+            print('[+] Port ' + str(port) + ' is Open ')
+    except:
+        pass
+        
+    try:
+        sock = socket.socket()
         sock.settimeout(0.01)
         sock.connect((ipaddress, port))
 
