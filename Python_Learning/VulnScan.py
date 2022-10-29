@@ -44,7 +44,7 @@ def scan_port(ipaddress, port):
             print('[+] Port ' + str(port) + ' is Open ')
     except:
         pass
-        
+
     try:
         sock = socket.socket()
         sock.settimeout(0.01)
@@ -62,6 +62,11 @@ def scan_port(ipaddress, port):
 
 if __name__ == "__main__":
     targets = input('[+] Enter Target/s To Scan( for multiple targets usea  comma): ')
+    start_port = input('enter the port to start the scan: ')
+    end_port = input('enter the port to end the scan: ')
+    start_port = start_port
+    end_port = end_port
+    
     if ',' in targets:
         for ip_address in targets.split(','):
             scan(ip_address.strip(' '))
