@@ -3,6 +3,7 @@ from IPy import IP
 import pyfiglet
 import subprocess
 import time
+from datetime import datetime
 
 subprocess.call('clear', shell=True)
 
@@ -65,6 +66,8 @@ if __name__ == "__main__":
     start_port = input('enter the port to start the scan: ')
     end_port = input('enter the port to end the scan: ')
  
+    time_start = datetime.now().replace(miscrosecond=0)
+    print("Scanning started at:" + str(time_start)) 
 
     if ',' in targets:
         for ip_address in targets.split(','):
@@ -80,3 +83,12 @@ with open("vulnerable_banners.txt", 'r') as file:
             if line.strip() in banner:
                 print('[!!] VULNERABLE BANNER: "' + banner + '" ON PORT: ' + str(ports[count]))
         count += 1
+
+#check completed time 
+time_completed = datetime.now().replace(microsecond=0) 
+ 
+#Total time the Scan took 
+time_total = time_completed - time_start 
+ 
+print("Scanning ended at:" + str(time_completed)) 
+print("Scanning Completed in " + str(time_total))     
