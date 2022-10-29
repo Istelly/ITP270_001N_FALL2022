@@ -80,4 +80,4 @@ with open("vulnerable_banners.txt", 'r') as file:
         for line in file.readlines():
             if line.strip() in banner:
                 print('[!!] VULNERABLE BANNER: "' + banner + '" ON PORT: ' + str(ports[count]))
-            count += 1
+        count += 1
