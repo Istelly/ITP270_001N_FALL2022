@@ -66,7 +66,7 @@ if __name__ == "__main__":
     end_port = input('enter the port to end the scan: ')
     start_port = start_port
     end_port = end_port
-    
+
     if ',' in targets:
         for ip_address in targets.split(','):
             scan(ip_address.strip(' '))
@@ -80,3 +80,4 @@ with open("vulnerable_banners.txt", 'r') as file:
         for line in file.readlines():
             if line.strip() in banner:
                 print('[!!] VULNERABLE BANNER: "' + banner + '" ON PORT: ' + str(ports[count]))
+            count += 1
