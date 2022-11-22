@@ -12,7 +12,7 @@ time.sleep(1)
 
 def send_request():
     cookies = {'PHPSESSID':'u011e9l0t5le0na9rh6ddtc0j2', 'security':'low'}
-    url='127.0.0.1/DVWA/vulnerabilities/xss_s/' 
+    url='http://127.0.0.1/DVWA/vulnerabilities/xss_s/' 
     form_input = open("/home/isaiah/ITP270_001N_FALL2022/Python_Learning/keyboard_Input.txt") 
     form_send = form_input.read() 
     form_data = {'txtName':'Test IT', 'mtxMessage':f"'{form_send}'", 'btnSign':'Sign+Guestbook'}   
